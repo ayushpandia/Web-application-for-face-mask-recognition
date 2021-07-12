@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Started</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+
+</head>
+<body class="#e8eaf6 indigo lighten-5">
+    
+  <nav class="#90caf9 blue lighten-3"> 
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center font-style larger">Face Mask Recognition</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <a href="{{ url_for('home') }}" class="waves-effect waves-light btn-small">HOME</a>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col s30 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <u><strong><span style="font-style: oblique;" class="card-title">Instructions</span></strong> </u>
+          <p>
+            1.Please Enter your name and click on the submit button to start the test.
+          </p>
+          <br>
+          <p>
+            2.You should look directly at the camera.
+          </p>
+          <br>
+          <p>
+              3.Press Esc key to stop the test.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- THIS IS MY FORM -->
+    <form class="MyForm" action="/StartTest" method="POST">
+        <!-- <h3>Face Mask Recognititon</h3> -->
+        <div>
+            Enter your Name:
+        </div>
+        <br>
+        <div>
+           <input type="text" name="Name" />
+        </div>
+        <br>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right"></i>
+          </button>
+    </form>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
